@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Resume Builder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="wrapper">
+    <header class="hero">
+      <h1>AI Resume Builder</h1>
+      <p>Fill in your details and download your resume</p>
+    </header>
+
+    <div class="content-box">
+      <section class="form-box">
+        <h2>Your Information</h2>
+        <form id="resumeForm">
+          <input type="text" id="name" placeholder="Full Name" required />
+          <input type="email" id="email" placeholder="Email Address" required />
+          <textarea id="education" placeholder="Education" required></textarea>
+          <textarea id="experience" placeholder="Experience" required></textarea>
+          <textarea id="skills" placeholder="Skills (comma separated)" required></textarea>
+          <button type="submit">Generate Resume</button>
+        </form>
+      </section>
+
+      <section class="preview-box" id="resumePreview">
+        <h1 id="prevName">Your Name</h1>
+        <p id="prevEmail">email@example.com</p>
+        <h3>Education</h3>
+        <p id="prevEducation">Education details here</p>
+        <h3>Experience</h3>
+        <p id="prevExperience">Experience details here</p>
+        <h3>Skills</h3>
+        <ul id="prevSkills"></ul>
+      </section>
+    </div>
+
+    <div class="download-btn">
+      <button id="downloadBtn">Download PDF</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
